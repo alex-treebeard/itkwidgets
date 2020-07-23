@@ -13,4 +13,5 @@ jobs:
         with:
           docker-username: thewtex
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
-          docker-image-name: insighttoolkit/itkwidgets
+          docker-image-name: treebeardtech/itkwidgets
+          debug: true
