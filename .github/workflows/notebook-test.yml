@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
-      - uses: treebeardtech/treebeard@config-fix
+      - uses: treebeardtech/treebeard@v0.1.0
         with:
           docker-username: alextreebeard
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
