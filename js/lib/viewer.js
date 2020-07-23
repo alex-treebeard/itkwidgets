@@ -112,8 +112,8 @@ const ViewerModel = widgets.DOMWidgetModel.extend(
         _view_name: 'ViewerView',
         _model_module: 'itkwidgets',
         _view_module: 'itkwidgets',
-        _model_module_version: '0.31.3',
-        _view_module_version: '0.31.3',
+        _model_module_version: '0.31.4',
+        _view_module_version: '0.31.4',
         rendered_image: null,
         rendered_label_image: null,
         label_image_names: null,
@@ -844,15 +844,14 @@ const ViewerView = widgets.DOMWidgetView.extend({
         this.model.skipOnCroppingPlanesChanged = true
         this.model.set(
           'roi',
-          { array: new Float64Array([
+          new Float64Array([
               bboxCorners[0][0],
               bboxCorners[0][1],
               bboxCorners[0][2],
               bboxCorners[7][0],
               bboxCorners[7][1],
               bboxCorners[7][2]
-          ]),
-          shape: [2,3] }
+          ])
         )
         this.model.save_changes()
       } else {
